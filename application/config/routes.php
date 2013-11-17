@@ -39,9 +39,9 @@
 */
 
 $route['default_controller'] = "beranda";
-$route['app-panel'] 		= 'app/apppanel';
-$route['app-panel/proses'] 	= 'app/apppanel/proses';
-$route['app-panel/logout'] 	= 'app/apppanel/logout';
+$route['admin-panel'] 		= 'admin/adminpanel';
+$route['admin-panel/proses'] 	= 'admin/adminpanel/proses';
+$route['admin-panel/logout'] 	= 'admin/adminpanel/logout';
 $route['404_override'] = '';
 
 
