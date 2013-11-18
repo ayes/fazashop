@@ -89,8 +89,8 @@
             <div class="col-xs-6 col-sm-3">
          
            <div class="pin">
-               <div title="<?= 'Personal Computer' ?>" class="well well-sm">
-                   <small><?= character_limiter('Personal Computer', 28) ?></small>
+               <div title="<?php echo 'Personal Computer' ?>" class="well well-sm">
+                   <small><?php echo character_limiter('Personal Computer', 28) ?></small>
            </div>
              <img class="img-rounded" src="<?php echo base_url(); ?>source/images/s4.jpg" width="100%">
              <p>Rp. 1.250.000</p>
@@ -106,8 +106,8 @@
             </div>
                     <div class="col-xs-6 col-sm-3">
                        <div class="pin">
-               <div title="<?= 'Personal Computer' ?>" class="well well-sm">
-                   <small><?= character_limiter('Personal Computer', 28) ?></small>
+               <div title="<?php echo 'Personal Computer' ?>" class="well well-sm">
+                   <small><?php echo character_limiter('Personal Computer', 28) ?></small>
            </div>
              <img class="img-rounded" src="<?php echo base_url(); ?>source/images/s4.jpg" width="100%">
             <p>Rp. 1.250.000</p>
@@ -123,8 +123,8 @@
                     </div>
                     <div class="col-xs-6 col-sm-3">
                          <div class="pin">
-               <div title="<?= 'Personal Computer' ?>" class="well well-sm">
-                   <small><?= character_limiter('Personal Computer', 28) ?></small>
+               <div title="<?php echo 'Personal Computer' ?>" class="well well-sm">
+                   <small><?php echo character_limiter('Personal Computer', 28) ?></small>
            </div>
              <img class="img-rounded" src="<?php echo base_url(); ?>source/images/s4.jpg" width="100%">
             <p>Rp. 1.250.000</p>
