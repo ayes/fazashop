@@ -24,9 +24,9 @@ class Product_category_model extends CI_Model {
         $query = $this->db->get('tbproduct_category',$config['per_page'],$this->uri->segment(4));
         return $query;
     }
-    function countNewsCategory($id) {
-            $this->db->where('category_id', $id);
-            $this->db->from('tbnews');
+    function countProductCategory($id) {
+            $this->db->where('product_category_id', $id);
+            $this->db->from('tbproducts');
             return $this->db->count_all_results();
         }
     function save() {
@@ -37,7 +37,7 @@ class Product_category_model extends CI_Model {
     }
     function editId() {
         $this->db->where('id', $this->uri->segment(4));
-        return $this->db->get('tbnews_category');
+        return $this->db->get('tbproduct_category');
     }
     function editFormId() {
         $id = $this->input->post('id');
@@ -50,11 +50,11 @@ class Product_category_model extends CI_Model {
             'category' => $this->input->post('category')
         );
         $this->db->where('id', $id);
-        $this->db->update('tbnews_category', $data);
+        $this->db->update('tbproduct_category', $data);
     }
     function delete() {
         $this->db->where('id', $this->uri->segment(4));
-        $this->db->delete('tbnews_category');
+        $this->db->delete('tbproduct_category');
     }
 }
 

@@ -14,18 +14,26 @@
 <table class="table table-striped">
 <tr>
     <th>NO.</th>
-    <th>Category</th>
+    <th>CATEGORY</th>
+    <th>EDIT</th>
+    <th>DELETE</th>
  
 </tr>                   
 <?php $no = $this->uri->segment(3); ?>
 <?php foreach($getProductCategory->result() as $row) : ?>                               
 <td><?php echo $no=$no+1; ?></td>
 <td><?php echo $row->category; ?></td>
-<?php /*
-<td><?php echo anchor('app/evaluasi_anggaran_apbd/edit/'.$row->id, 'VIEW', array('title'=>'Edit')); ?></td>
-<td><?php echo anchor('app/evaluasi_anggaran_apbd/edit/'.$row->id, 'EDIT', array('title'=>'Edit')); ?></td>
-<td><?php echo anchor('app/evaluasi_anggaran_apbd/delete/'.$row->id, 'DELETE', array('title'=>'Hapus', 'onClick'=>"return confirm('Anda yakin ingin menghapus?')")); ?></td>
-*/ ?>
+
+<td><?php echo anchor('admin/product_category/edit/'.$row->id, 'EDIT', array('title'=>'Edit')); ?></td>
+
+<td>
+    <?php if ($this->product_category_model->countProductCategory($row->id) == 0) { ;?>
+<?php echo anchor('admin/product_category/delete/'.$row->id, 'DELETE', array('title'=>'Hapus', 'onClick'=>"return confirm('Anda yakin ingin menghapus?')")); ?>
+<?php } else { ?>
+ <?php echo 'CANNOT DELETE'; ?>
+ <?php } ?>
+</td>
+
 </tr>                                
  
 <?php endforeach; ?>				

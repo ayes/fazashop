@@ -9,20 +9,22 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href='/'>Faza Shop</a>
+    <a class="navbar-brand" href='/'><?php echo $this->tools_model->getShopName(); ?></a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
   <ul class="nav navbar-nav navbar">
-    <li><a href="/admin/product_category"><span class="glyphicon glyphicon-time"></span> Category</a></li>   
+    <li><a href="/admin/product_category"><span class="glyphicon glyphicon-time"></span> Category</a></li>  
+    <li><a href="/admin/products"><span class="glyphicon glyphicon-time"></span> Products</a></li>
+    <li><a href="/admin/banners"><span class="glyphicon glyphicon-time"></span> Banners</a></li> 
       </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-star"></span> Alert <span class="badge">7</span></a></li>
       <li class="dropdown user-dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <?php echo $this->session->userdata('name'); ?> <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="/app/profile"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                <li><a href="/admin/profile"><span class="glyphicon glyphicon-user"></span> Shop Profile</a></li>
                 <li class="divider"></li>
                 <li><a href="/app-panel/logout"><span class="glyphicon glyphicon-off"></span> Log Out</a></li>
               </ul>
