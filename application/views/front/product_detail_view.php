@@ -71,9 +71,9 @@
          Price : <?php echo 'Rp. '.number_format($row->price, 0, ',', '.'); ?><br />
          <?php echo $row->description; ?><br />
          <div class="text-right">
-         <button type="button" class="btn btn-default btn-sm">
+         <a href="product/buy/<?php echo url_title(strtolower($row->name)).'/'.$row->id;?>" type="button" class="btn btn-default btn-sm">
   <span class="glyphicon glyphicon-shopping-cart"></span> Buy
-</button>
+</a>
              </div>
                </div>
                  </div>

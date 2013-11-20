@@ -57,25 +57,44 @@
 
   </div>    
             
-             <?php foreach ($getRandomProductsLimit as $row): ?>
-            <div class="col-xs-6 col-sm-3">
-         
-           <div class="pin">
-               <div title="<?php echo $row->name ?>" class="well well-sm">
-                   <small><?php echo character_limiter($row->name, 28) ?></small>
-           </div>
-             <img class="img-rounded" src="<?php echo base_url(); ?>fx-archive/images_product/thumbs/<?php echo $row->picture; ?>" width="227px" height="170px">
-             <p>Rp. <?php echo number_format($row->price, 0, ',', '.'); ?></p>
-             <p class="text-right">
-               <a href="/product/detail/<?php echo url_title(strtolower($row->name)).'/'.$row->id;?>" type="button" class="btn btn-default btn-sm">
-                   <span class="glyphicon glyphicon-eye-open"></span> Detail
-</a>
-               <a href="product/buy/<?php echo url_title(strtolower($row->name)).'/'.$row->id;?>" type="button" class="btn btn-default btn-sm">
-  <span class="glyphicon glyphicon-shopping-cart"></span> Buy
-</a>
-           </p> 
-                    </div>
+             <?php foreach ($getProductDetail as $row): ?>
+    <div class="col-xs-6 col-sm-9">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Order Product</h3>
             </div>
+            <div class="panel-body">
+                <h1><?php echo $row->name; ?></h1>
+                
+                Code : <?php echo $row->id; ?><br />
+                Price : <?php echo 'Rp. '.number_format($row->price, 0, ',', '.'); ?><br />
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">How To Order</h3>
+            </div>
+            <div class="panel-body">
+                <h4>Berikut ini adalah cara prosedur pemesanan lewat sms</h4>
+                <hr />
+                <ol>
+                    <li>Sms code barang yang akan dipesan dan alamat lengkap ke 0812-5302-4526.</li>
+                    <li>Anda akan menerima balasan jumlah transfer dan keterangan lainnya.</li>
+                    <li>Transfer ke rek. kami dengan detail nomer rekening dibawah ini.</li>
+                    <li>Setelah transfer, segera konfirmasi dan sertakan alamat kirim melalui sms.</li>
+                    <li>Barang akan dikirim via JNE. no. resi pengiriman akan disms kepada semua pemesan/penerima.</li>
+                </ol>
+                <br />
+                <h4>Berikut ini adalah cara prosedur pembelian langsung ke toko / showroom (COD)</h4>
+                <hr />
+                <ol>
+                    <li>Langsung datang ke showroom yang berlokasi di Jl. KH. Abul Hasan Gang 2 NO.35 RT 14 Samarinda (Belakang Apotik Murni)</li>
+                    <li>Jam buka kami adalah setiap hari Senin – Jumat pk.09.00 – pk. 15.00 dan Sabtu – Minggu pk. 10.00-14.00, kami buka setiap hari</li>
+                    <li>Kami menerima pembayaran cash, debit, ataupun kartu kredit dari segala macam bank di Indonesia</li>
+                </ol>
+            </div>
+        </div>
+    </div>
                     
 <?php endforeach; ?>              
              

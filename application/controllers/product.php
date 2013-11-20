@@ -12,6 +12,12 @@ class Product extends CI_Controller {
                 $data['getProductDetail']= $this->beranda_model->getProductDetail();
 		$this->load->view('front/product_detail_view', $data);
 	}
+        public function buy()
+	{
+                $data['getCategory']= $this->beranda_model->getCategory();
+                $data['getProductDetail']= $this->beranda_model->getProductDetail();
+		$this->load->view('front/buy_view', $data);
+	}
 }
 
 /* End of file welcome.php */
