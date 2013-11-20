@@ -31,6 +31,10 @@
     <input name="price" type="text" class="form-control" id="price" placeholder="Price" required="required">
       </div>
       <div class="form-group">
+    <label for="description">Description</label>
+    <textarea name="description" class="form-control" rows="8"></textarea>
+      </div>
+      <div class="form-group">
     <label for="picture">Picture</label>
     <?php echo form_upload('userfile'); ?>
     <p class="help-block">Size 227px * 170px.</p>

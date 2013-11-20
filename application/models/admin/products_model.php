@@ -56,6 +56,7 @@ class Products_model extends CI_Model {
                     'product_category_id' => $this->input->post('product_category_id'),
                     'name' => $this->input->post('name'),
                     'price' => $this->input->post('price'),
+                    'description' => $this->input->post('description')
                 );
              if ($image_ext == '') {
                  $data['picture'] = 'kosong.gif';
@@ -108,6 +109,7 @@ class Products_model extends CI_Model {
                     'product_category_id' => $this->input->post('product_category_id'),
                     'name' => $this->input->post('name'),
                     'price' => $this->input->post('price'),
+                    'description' => $this->input->post('description')
                 );
              if ($image_ext != '') {
                 $data['picture'] = $image_file;

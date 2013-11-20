@@ -31,6 +31,10 @@ class Beranda_model extends CI_Model {
         $this->db->where('product_category_id', $this->uri->segment(4));
             return $this->db->get('tbproducts')->result();
         }
+        function getProductDetail() {
+        $this->db->where('id', $this->uri->segment(4));
+            return $this->db->get('tbproducts')->result();
+        }
 }
 
 ?>

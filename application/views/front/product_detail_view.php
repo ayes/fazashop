@@ -102,24 +102,25 @@
 
   </div>    
             
-             <?php foreach ($getRandomProductsLimit as $row): ?>
-            <div class="col-xs-6 col-sm-3">
-         
-           <div class="pin">
-               <div title="<?php echo $row->name ?>" class="well well-sm">
-                   <small><?php echo character_limiter($row->name, 28) ?></small>
-           </div>
-             <img class="img-rounded" src="<?php echo base_url(); ?>fx-archive/images_product/thumbs/<?php echo $row->picture; ?>" width="227px" height="170px">
-             <p>Rp. <?php echo number_format($row->price, 0, ',', '.'); ?></p>
-             <p class="text-right">
-               <a href="/product/detail/<?php echo url_title(strtolower($row->name)).'/'.$row->id;?>" type="button" class="btn btn-default btn-sm">
-                   <span class="glyphicon glyphicon-eye-open"></span> Detail
-</a>
-               <button type="button" class="btn btn-default btn-sm">
+             <?php foreach ($getProductDetail as $row): ?>
+            <div class="col-xs-6 col-sm-9">
+                 <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Product Description</h3>
+  </div>
+               <div class="panel-body">
+                   <h1><?php echo $row->name; ?></h1>
+                   <img class="img-rounded" src="<?php echo base_url(); ?>fx-archive/images_product/thumbs/<?php echo $row->picture; ?>" width="227px" height="170px"><br />
+         Code : <?php echo $row->id; ?><br />
+         Price : <?php echo 'Rp. '.number_format($row->price, 0, ',', '.'); ?><br />
+         <?php echo $row->description; ?><br />
+         <div class="text-right">
+         <button type="button" class="btn btn-default btn-sm">
   <span class="glyphicon glyphicon-shopping-cart"></span> Buy
 </button>
-           </p> 
-                    </div>
+             </div>
+               </div>
+                 </div>
             </div>
                     
 <?php endforeach; ?>              
