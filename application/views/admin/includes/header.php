@@ -7,7 +7,7 @@
     <meta name="description" content="Artist Management System">
     <meta name="author" content="Irfan Mahfudz Guntur - ayes@bsmsite.com">
     <?php echo link_tag(base_url().'template/default/icon/favicon.ico', 'shortcut icon', 'image/x-icon'); ?>
-    <title>Dashboard - Faza Shop</title>
+    <title>Dashboard - <?php echo $this->tools_model->getShopName(); ?></title>
 
      <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url(); ?>template/default/css/bootstrap.css" rel="stylesheet">

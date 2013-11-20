@@ -1,51 +1,6 @@
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Faza Shop The Online Shopping Experience">
-    <meta name="author" content="Irfan Mahfudz Guntur - ayes@bsmsite.com">
-    <link rel="shortcut icon" href="ivan/favicon.ico">
-
-    <title>Faza Shop</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url(); ?>template/default/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="<?php echo base_url(); ?>template/default/css/ivan.css" rel="stylesheet">
-     <link href="<?php echo base_url(); ?>template/default/css/carousel.css" rel="stylesheet">
-     <link href="<?php echo base_url(); ?>template/default/css/docs.css" rel="stylesheet">
-
-    
-  </head>
-
-  <body>
-
-      
-      
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" target="_blank" href="/"><?php echo $this->tools_model->getShopName(); ?></a>
-        </div>
-          <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    
-      
-  
-      
-        </div><!--/.navbar-collapse -->
-        
-      </div>
-    </div>
+<?php $this->load->view('front/obj/header'); ?>
+<body>
+<?php $this->load->view('front/obj/navbar'); ?>
 
   
 <!-- Carousel
@@ -111,7 +66,8 @@
                <div class="panel-body">
                    <h1><?php echo $row->name; ?></h1>
                    <img class="img-rounded" src="<?php echo base_url(); ?>fx-archive/images_product/thumbs/<?php echo $row->picture; ?>" width="227px" height="170px"><br />
-         Code : <?php echo $row->id; ?><br />
+         <hr />
+                   Code : <?php echo $row->id; ?><br />
          Price : <?php echo 'Rp. '.number_format($row->price, 0, ',', '.'); ?><br />
          <?php echo $row->description; ?><br />
          <div class="text-right">
