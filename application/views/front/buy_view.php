@@ -92,6 +92,14 @@
                     <li>Jam buka kami adalah setiap hari Senin – Jumat pk.09.00 – pk. 15.00 dan Sabtu – Minggu pk. 10.00-14.00, kami buka setiap hari</li>
                     <li>Kami menerima pembayaran cash, debit, ataupun kartu kredit dari segala macam bank di Indonesia</li>
                 </ol>
+                <br />
+                <h4>Nomor Rekening</h4>
+                <hr />
+                <ul>
+                    <li>BCA 254-0250-963 an Yusuf Bahtimi, S.Pi</li>
+                    <li>MANDIRI 148-00-0513462-5 an Yusuf Bahtimi, S.Pi</li>
+                    <li>BRI 0082-01-049485-50-8 an Lilik Zuniawati, S.Ag</li>
+                </ul>
             </div>
         </div>
     </div>
