@@ -110,7 +110,7 @@
                    <small><?php echo character_limiter($row->name, 28) ?></small>
            </div>
              <img class="img-rounded" src="<?php echo base_url(); ?>fx-archive/images_product/thumbs/<?php echo $row->picture; ?>" width="227px" height="170px">
-             <p>Rp. <?php echo $row->price; ?></p>
+             <p>Rp. <?php echo number_format($row->price, 0, ',', '.'); ?></p>
              <p class="text-right">
                <button type="button" class="btn btn-default btn-sm">
   <span class="glyphicon glyphicon-eye-open"></span> Detail

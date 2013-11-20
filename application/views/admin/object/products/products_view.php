@@ -62,7 +62,7 @@
 
 <td><?php echo $row->id; ?></td>
 <td><?php echo $row->name; ?></td>
-<td><?php echo $row->price; ?></td>
+<td><?php echo number_format($row->price, 0, ',', '.'); ?></td>
 <td><?php echo anchor(base_url().'fx-archive/images_product/thumbs/'.$row->picture, 'LINK', array('target'=>'_blank')); ?></td>
 
 

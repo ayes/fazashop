@@ -111,7 +111,9 @@ class Products_model extends CI_Model {
                 );
              if ($image_ext != '') {
                 $data['picture'] = $image_file;
+                if ($picture != 'kosong.gif') {
                 unlink($this->product_path.'/thumbs/'.$picture);
+                }
                 unlink($this->product_path.'/'.$image_file);
             }
         $this->db->where('id', $id);
