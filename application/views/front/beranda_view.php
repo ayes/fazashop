@@ -70,7 +70,7 @@
                <a href="/product/detail/<?php echo url_title(strtolower($row->name)).'/'.$row->id;?>" type="button" class="btn btn-default btn-sm">
                    <span class="glyphicon glyphicon-eye-open"></span> Detail
 </a>
-               <a href="product/buy/<?php echo url_title(strtolower($row->name)).'/'.$row->id;?>" type="button" class="btn btn-default btn-sm">
+               <a href="/product/buy/<?php echo url_title(strtolower($row->name)).'/'.$row->id;?>" type="button" class="btn btn-default btn-sm">
   <span class="glyphicon glyphicon-shopping-cart"></span> Buy
 </a>
            </p> 
