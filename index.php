@@ -56,7 +56,7 @@ if (defined('ENVIRONMENT'))
  * as this file.
  *
  */
-	$system_path = '../tools.bsmsite.com/system';
+	$system_path = '../../tools.bsmsite.com/system';
 
 /*
  *---------------------------------------------------------------
