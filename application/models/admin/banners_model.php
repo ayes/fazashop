@@ -41,8 +41,8 @@ class Banners_model extends CI_Model {
            $config = array(
                 'source_image' => $image_data['full_path'],
                 'new_image' => $this->banners_path . '/thumbs',
-                'maintain_ration' => true,
-                'width' => '900px',
+                'maintain_ratio' => true,
+                'width' => '1344px',
                 'height' => '500px'
             );
             $this->load->library('image_lib', $config);

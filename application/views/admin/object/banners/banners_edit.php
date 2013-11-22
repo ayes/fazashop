@@ -23,7 +23,7 @@
       <div class="form-group">
     <label for="banner">Banner</label>
     <?php echo form_upload('userfile'); ?>
-    <p class="help-block">Size 900px * 500px.</p>
+    <p class="help-block">Size 1344px * 500px.</p>
       </div>
   
   <button type="submit" class="btn btn-primary">Submit</button>
