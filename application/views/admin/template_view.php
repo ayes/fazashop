@@ -17,7 +17,8 @@
   <ul class="nav navbar-nav navbar">
     <li><a href="/admin/product_category"><span class="glyphicon glyphicon-time"></span> Category</a></li>  
     <li><a href="/admin/products"><span class="glyphicon glyphicon-time"></span> Products</a></li>
-    <li><a href="/admin/banners"><span class="glyphicon glyphicon-time"></span> Banners</a></li> 
+    <li><a href="/admin/banners"><span class="glyphicon glyphicon-time"></span> Banners</a></li>
+    <li><a href="/admin/how_order"><span class="glyphicon glyphicon-time"></span> How To Order</a></li>
       </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-star"></span> Alert <span class="badge">7</span></a></li>
@@ -49,3 +50,7 @@
 
      
 <?php $this->load->view('admin/includes/footer'); ?>
+
+
+  </body>
+</html>

@@ -12,5 +12,5 @@
         <link href="http://tools.bsmsite.com/template/bootstrap/css/bootstrap.css" rel="stylesheet">
         <!-- Custom styles for this template -->
         <link href="http://tools.bsmsite.com/template/fazashop/css/fazashop.css" rel="stylesheet">
-        <link href="http://tools.bsmsite.com/template/fazashop/css/carousel.css" rel="stylesheet">
+        <link href="http://tools.bsmsite.com/template/global/css/carousel.css" rel="stylesheet">
     </head>

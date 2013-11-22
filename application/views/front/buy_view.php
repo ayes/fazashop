@@ -75,31 +75,9 @@
                 <h3 class="panel-title">How To Order</h3>
             </div>
             <div class="panel-body">
-                <h4>Berikut ini adalah cara prosedur pemesanan lewat sms</h4>
-                <hr />
-                <ol>
-                    <li>Sms code barang yang akan dipesan dan alamat lengkap ke 0812-5302-4526.</li>
-                    <li>Anda akan menerima balasan jumlah transfer dan keterangan lainnya.</li>
-                    <li>Transfer ke rek. kami dengan detail nomer rekening dibawah ini.</li>
-                    <li>Setelah transfer, segera konfirmasi dan sertakan alamat kirim melalui sms.</li>
-                    <li>Barang akan dikirim via JNE. no. resi pengiriman akan disms kepada semua pemesan/penerima.</li>
-                </ol>
-                <br />
-                <h4>Berikut ini adalah cara prosedur pembelian langsung ke toko / showroom (COD)</h4>
-                <hr />
-                <ol>
-                    <li>Langsung datang ke showroom yang berlokasi di Jl. KH. Abul Hasan Gang 2 NO.35 RT 14 Samarinda (Belakang Apotik Murni)</li>
-                    <li>Jam buka kami adalah setiap hari Senin – Jumat pk.09.00 – pk. 15.00 dan Sabtu – Minggu pk. 10.00-14.00, kami buka setiap hari</li>
-                    <li>Kami menerima pembayaran cash, debit, ataupun kartu kredit dari segala macam bank di Indonesia</li>
-                </ol>
-                <br />
-                <h4>Nomor Rekening</h4>
-                <hr />
-                <ul>
-                    <li>BCA 254-0250-963 an Yusuf Bahtimi, S.Pi</li>
-                    <li>MANDIRI 148-00-0513462-5 an Yusuf Bahtimi, S.Pi</li>
-                    <li>BRI 0082-01-049485-50-8 an Lilik Zuniawati, S.Ag</li>
-                </ul>
+               <?php foreach ($get_how_order->result() as $row): ?>
+                <?php echo $row->how_order ; ?>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>

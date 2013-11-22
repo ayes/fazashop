@@ -35,6 +35,10 @@ class Beranda_model extends CI_Model {
         $this->db->where('id', $this->uri->segment(4));
             return $this->db->get('tbproducts')->result();
         }
+        function get_how_order() {
+            $this->db->where('id', 1);
+            return $this->db->get('tbhow_order');
+        }
 }
 
 ?>
