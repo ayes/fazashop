@@ -17,6 +17,10 @@ class Beranda_model extends CI_Model {
    function getCategory() {
             return $this->db->get('tbproduct_category');
         }
+   function get_name_category() {
+            $this->db->where('id', $this->uri->segment(4));
+            return $this->db->get('tbproduct_category');
+        }
    function getCountCategoryProduct($id) {
       $query = $this->db->query('select count(product_category_id) as cat from tbproducts where product_category_id ='.$id);
       foreach ($query->result() as $row) {

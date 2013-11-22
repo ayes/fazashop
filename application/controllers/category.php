@@ -9,8 +9,9 @@ class Category extends CI_Controller {
 	public function index()
 	{
                 $data['getCategory']= $this->beranda_model->getCategory();
+                $data['get_name_category']= $this->beranda_model->get_name_category();
                 $data['getRandomProductsLimit']= $this->beranda_model->getProductCategory();
-		$this->load->view('front/beranda_view', $data);
+		$this->load->view('front/category_view', $data);
 	}
 }
 

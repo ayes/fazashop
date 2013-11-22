@@ -30,6 +30,18 @@
       <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div><!-- /.carousel -->
     <div class="container">
+        <div class='row'>
+            <div class="col-xs-12">
+                <ol class="breadcrumb">
+                    <li><a href="/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                        <?php foreach ($getProductDetail as $row): ?>
+                    <li><a href="<?php echo '/category/index/'.url_title(strtolower($this->tools_model->get_name_category($row->product_category_id))).'/'.$row->product_category_id ;?>"><span class="glyphicon glyphicon-th-large"></span> <?php echo $this->tools_model->get_name_category($row->product_category_id); ?></a></li>
+                    <li class="active"><span class="glyphicon glyphicon-tag"></span> <?php echo $row->name; ?></li>
+                        <?php endforeach; ?>
+                </ol>
+            </div>
+        </div>
+        
         <div class="row">
         <div class="col-xs-6 col-md-3">
            <div class="panel panel-default">
@@ -68,6 +80,7 @@
                    <img class="img-rounded" src="<?php echo base_url(); ?>fx-archive/images_product/thumbs/<?php echo $row->picture; ?>"><br />
          <hr />
                    Code : <?php echo $row->id; ?><br />
+                   Category : <a href="<?php echo '/category/index/'.url_title(strtolower($this->tools_model->get_name_category($row->product_category_id))).'/'.$row->product_category_id ;?>"><?php echo $this->tools_model->get_name_category($row->product_category_id); ?></a><br />
          Price : <?php echo 'Rp. '.number_format($row->price, 0, ',', '.'); ?><br />
          <?php echo $row->description; ?><br />
          <div class="text-right">

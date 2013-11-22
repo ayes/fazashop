@@ -30,19 +30,17 @@
       <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div><!-- /.carousel -->
     <div class="container">
-        <div class='row'>
+<div class='row'>
             <div class="col-xs-12">
                 <ol class="breadcrumb">
                     <li><a href="/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                        <?php foreach ($getProductDetail as $row): ?>
-                    <li><a href="<?php echo '/category/index/'.url_title(strtolower($this->tools_model->get_name_category($row->product_category_id))).'/'.$row->product_category_id ;?>"><span class="glyphicon glyphicon-th-large"></span> <?php echo $this->tools_model->get_name_category($row->product_category_id); ?></a></li>
-                    <li><a href="/product/detail/<?php echo url_title(strtolower($row->name)).'/'.$row->id;?>"><span class="glyphicon glyphicon-tag"></span> <?php echo $row->name; ?></a></li>
-                    <li class='active'><span class="glyphicon glyphicon-shopping-cart"></span> Order</li>    
+                        <?php foreach ($get_name_category->result() as $row): ?>
+                    <li class='active'><span class="glyphicon glyphicon-th-large"></span> <?php echo $row->category; ?></li>
+                     
                         <?php endforeach; ?>
                 </ol>
             </div>
         </div>
-        
         <div class="row">
         <div class="col-xs-6 col-md-3">
            <div class="panel panel-default">
@@ -54,8 +52,11 @@
    <?php foreach ($getCategory->result() as $row): ?>
 <?php if ($this->beranda_model->getCountCategoryProduct($row->id) == 0) { ?>
 <?php } else { ?>
+                  <?php if ($this->uri->segment(4) == $row->id) : ?>
+<li class='active'><a href="<?php echo '/category/index/'.url_title(strtolower($row->category)).'/'.$row->id ;?>"><?php echo $row->category.' <span class="badge pull-right">'.$this->beranda_model->getCountCategoryProduct($row->id).'</span>'; ?></a></li>                  
+                    <?php else: ?>
 <li><a href="<?php echo '/category/index/'.url_title(strtolower($row->category)).'/'.$row->id ;?>"><?php echo $row->category.' <span class="badge pull-right">'.$this->beranda_model->getCountCategoryProduct($row->id).'</span>'; ?></a></li>
-
+                    <?php endif; ?>
    
     
     
@@ -70,31 +71,25 @@
 
   </div>    
             
-             <?php foreach ($getProductDetail as $row): ?>
-    <div class="col-xs-6 col-sm-9">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Order Product</h3>
+             <?php foreach ($getRandomProductsLimit as $row): ?>
+            <div class="col-xs-6 col-sm-3">
+         
+           <div class="pin">
+               <div title="<?php echo $row->name ?>" class="well well-sm">
+                   <small><?php echo character_limiter($row->name, 28) ?></small>
+           </div>
+             <img class="img-rounded" src="<?php echo base_url(); ?>fx-archive/images_product/thumbs/<?php echo $row->picture; ?>">
+             <p>Rp. <?php echo number_format($row->price, 0, ',', '.'); ?></p>
+             <p class="text-right">
+               <a href="/product/detail/<?php echo url_title(strtolower($row->name)).'/'.$row->id;?>" type="button" class="btn btn-default btn-sm">
+                   <span class="glyphicon glyphicon-eye-open"></span> Detail
+</a>
+               <a href="/product/buy/<?php echo url_title(strtolower($row->name)).'/'.$row->id;?>" type="button" class="btn btn-default btn-sm">
+  <span class="glyphicon glyphicon-shopping-cart"></span> Buy
+</a>
+           </p> 
+                    </div>
             </div>
-            <div class="panel-body">
-                <h1><?php echo $row->name; ?></h1>
-                
-                Code : <?php echo $row->id; ?><br />
-                Category : <a href="<?php echo '/category/index/'.url_title(strtolower($this->tools_model->get_name_category($row->product_category_id))).'/'.$row->product_category_id ;?>"><?php echo $this->tools_model->get_name_category($row->product_category_id); ?></a><br />
-                Price : <?php echo 'Rp. '.number_format($row->price, 0, ',', '.'); ?><br />
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">How To Order</h3>
-            </div>
-            <div class="panel-body">
-               <?php foreach ($get_how_order->result() as $row): ?>
-                <?php echo $row->how_order ; ?>
-                <?php endforeach; ?>
-            </div>
-        </div>
-    </div>
                     
 <?php endforeach; ?>              
              

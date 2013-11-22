@@ -36,6 +36,14 @@ class Tools_model extends CI_Model {
         $results = $this->db->order_by('id','random')->limit(20)->get('tbproducts')->result(); 
         return $results;   
     }
+    function get_name_category($product_category_id) 
+    {
+        $this->db->where('id', $product_category_id); 
+        $q = $this->db->get('tbproduct_category');
+        foreach ($q->result() as $row) {
+        return $row->category;
+    }
+    }
 }
 
 ?>

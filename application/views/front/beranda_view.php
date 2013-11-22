@@ -41,8 +41,9 @@
    <?php foreach ($getCategory->result() as $row): ?>
 <?php if ($this->beranda_model->getCountCategoryProduct($row->id) == 0) { ?>
 <?php } else { ?>
+                 
 <li><a href="<?php echo '/category/index/'.url_title(strtolower($row->category)).'/'.$row->id ;?>"><?php echo $row->category.' <span class="badge pull-right">'.$this->beranda_model->getCountCategoryProduct($row->id).'</span>'; ?></a></li>
-
+                   
    
     
     
