@@ -16,7 +16,7 @@
 <?php echo form_open('admin/how_order/update', array('role' => 'form')); ?>    
   <?php echo form_hidden('id', $row->id); ?>
     <div class="form-group">
-    <label for="how_order">Description</label>
+    <label for="how_order">How to order</label>
     <textarea name="how_order" class="form-control" rows="20"><?php echo $row->how_order; ?></textarea>
       </div>
   

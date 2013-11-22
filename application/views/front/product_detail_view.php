@@ -65,7 +65,7 @@
   </div>
                <div class="panel-body">
                    <h1><?php echo $row->name; ?></h1>
-                   <img class="img-rounded" src="<?php echo base_url(); ?>fx-archive/images_product/thumbs/<?php echo $row->picture; ?>" width="227px" height="170px"><br />
+                   <img class="img-rounded" src="<?php echo base_url(); ?>fx-archive/images_product/thumbs/<?php echo $row->picture; ?>"><br />
          <hr />
                    Code : <?php echo $row->id; ?><br />
          Price : <?php echo 'Rp. '.number_format($row->price, 0, ',', '.'); ?><br />

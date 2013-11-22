@@ -46,7 +46,7 @@ class Products_model extends CI_Model {
             $config = array(
                 'source_image' => $image_data['full_path'],
                 'new_image' => $this->product_path . '/thumbs',
-                'maintain_ration' => true,
+                'maintain_ratio' => true,
                 'width' => '227px',
                 'height' => '170px'
             );
@@ -96,7 +96,7 @@ class Products_model extends CI_Model {
            $config = array(
                 'source_image' => $image_data['full_path'],
                 'new_image' => $this->product_path . '/thumbs',
-                'maintain_ration' => true,
+                'maintain_ratio' => true,
                 'width' => '227px',
                 'height' => '170px'
             );

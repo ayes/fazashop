@@ -64,7 +64,7 @@
                <div title="<?php echo $row->name ?>" class="well well-sm">
                    <small><?php echo character_limiter($row->name, 28) ?></small>
            </div>
-             <img class="img-rounded" src="<?php echo base_url(); ?>fx-archive/images_product/thumbs/<?php echo $row->picture; ?>" width="227px" height="170px">
+             <img class="img-rounded" src="<?php echo base_url(); ?>fx-archive/images_product/thumbs/<?php echo $row->picture; ?>">
              <p>Rp. <?php echo number_format($row->price, 0, ',', '.'); ?></p>
              <p class="text-right">
                <a href="/product/detail/<?php echo url_title(strtolower($row->name)).'/'.$row->id;?>" type="button" class="btn btn-default btn-sm">
