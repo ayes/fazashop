@@ -23,7 +23,7 @@ class Product extends CI_Controller {
         {
             $data['getCategory']= $this->beranda_model->getCategory();
             $data['getRandomProductsLimit'] = $this->beranda_model->get_search_product();
-            $this->load->view('front/beranda_view', $data);
+            $this->load->view('front/search_view', $data);
         }
 }
 

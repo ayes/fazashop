@@ -14,9 +14,11 @@ class Beranda_model extends CI_Model {
     function __construct() {
         parent::__construct();
     }
-   function getCategory() {
-            return $this->db->get('tbproduct_category');
-        }
+    function getCategory() 
+    {
+        $this->db->order_by('category', 'asc');
+        return $this->db->get('tbproduct_category');
+    }
    function get_name_category() {
             $this->db->where('id', $this->uri->segment(4));
             return $this->db->get('tbproduct_category');
@@ -47,7 +49,7 @@ class Beranda_model extends CI_Model {
         {
             $keyword = $this->input->post('keyword');
             $this->db->like('name',$keyword);
-            return $this->db->get('tbproducts')->result();
+            return $this->db->get('tbproducts');
         }
 }
 
