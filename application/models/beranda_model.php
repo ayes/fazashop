@@ -28,7 +28,7 @@ class Beranda_model extends CI_Model {
       }
     }
      function getRandomProductsLimit() {
-        $results = $this->db->order_by('id','random')->limit(20)->get('tbproducts')->result(); 
+        $results = $this->db->order_by('id','random')->limit(18)->get('tbproducts')->result(); 
         return $results;   
     }
     function getProductCategory() {
@@ -42,6 +42,12 @@ class Beranda_model extends CI_Model {
         function get_how_order() {
             $this->db->where('id', 1);
             return $this->db->get('tbhow_order');
+        }
+        function get_search_product() 
+        {
+            $keyword = $this->input->post('keyword');
+            $this->db->like('name',$keyword);
+            return $this->db->get('tbproducts')->result();
         }
 }
 

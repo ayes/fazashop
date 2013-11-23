@@ -19,6 +19,12 @@ class Product extends CI_Controller {
                 $data['get_how_order']= $this->beranda_model->get_how_order();
 		$this->load->view('front/buy_view', $data);
 	}
+        function search() 
+        {
+            $data['getCategory']= $this->beranda_model->getCategory();
+            $data['getRandomProductsLimit'] = $this->beranda_model->get_search_product();
+            $this->load->view('front/beranda_view', $data);
+        }
 }
 
 /* End of file welcome.php */
