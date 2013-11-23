@@ -11,7 +11,6 @@
  * @author BaseSystem Management http://bsmsite.com
  */
 class Product_category extends CI_Controller {
-    var $mnNews;
     function __construct() {
         parent::__construct();
         $this->load->model('admin/product_category_model');

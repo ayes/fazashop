@@ -51,6 +51,11 @@ class Beranda_model extends CI_Model {
             $this->db->like('name',$keyword);
             return $this->db->get('tbproducts');
         }
+        function get_ym_live_support() 
+        {
+            $this->db->order_by('ym_support', 'asc');
+            return $this->db->get('tblive_support');
+        }
 }
 
 ?>

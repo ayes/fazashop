@@ -42,34 +42,28 @@
             </div>
         </div>
         <div class="row">
-        <div class="col-xs-6 col-md-3">
-           <div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Category</h3>
-  </div>
-               <div class="panel-body">
-              <ul class="nav nav-pills nav-stacked">
-   <?php foreach ($getCategory->result() as $row): ?>
-<?php if ($this->beranda_model->getCountCategoryProduct($row->id) == 0) { ?>
-<?php } else { ?>
-                  <?php if ($this->uri->segment(4) == $row->id) : ?>
-<li class='active'><a href="<?php echo '/category/index/'.url_title(strtolower($row->category)).'/'.$row->id ;?>"><?php echo $row->category.' <span class="badge pull-right">'.$this->beranda_model->getCountCategoryProduct($row->id).'</span>'; ?></a></li>                  
-                    <?php else: ?>
-<li><a href="<?php echo '/category/index/'.url_title(strtolower($row->category)).'/'.$row->id ;?>"><?php echo $row->category.' <span class="badge pull-right">'.$this->beranda_model->getCountCategoryProduct($row->id).'</span>'; ?></a></li>
-                    <?php endif; ?>
-   
-    
-    
-    <?php } ?>
-<?php endforeach; ?>         
-</ul>            
-    </div>
-           </div>        
-            
-
-  
-
-  </div>    
+            <div class="col-xs-6 col-md-3">
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                <h3 class="panel-title">Category</h3>
+                </div>
+                <div class="panel-body">
+                <ul class="nav nav-pills nav-stacked">
+                <?php foreach ($getCategory->result() as $row): ?>
+                <?php if ($this->beranda_model->getCountCategoryProduct($row->id) == 0) { ?>
+                <?php } else { ?>
+                <?php if ($this->uri->segment(4) == $row->id) : ?>
+                <li class='active'><a href="<?php echo '/category/index/'.url_title(strtolower($row->category)).'/'.$row->id ;?>"><?php echo $row->category.' <span class="badge pull-right">'.$this->beranda_model->getCountCategoryProduct($row->id).'</span>'; ?></a></li>                  
+                <?php else: ?>
+                <li><a href="<?php echo '/category/index/'.url_title(strtolower($row->category)).'/'.$row->id ;?>"><?php echo $row->category.' <span class="badge pull-right">'.$this->beranda_model->getCountCategoryProduct($row->id).'</span>'; ?></a></li>
+                <?php endif; ?>
+                <?php } ?>
+                <?php endforeach; ?>         
+                </ul>            
+                </div>
+                </div>     
+                <?php $this->load->view('front/obj/ym_live_support'); ?>
+            </div>    
             
              <?php foreach ($getRandomProductsLimit as $row): ?>
             <div class="col-xs-6 col-sm-3">

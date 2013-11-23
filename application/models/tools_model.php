@@ -44,6 +44,15 @@ class Tools_model extends CI_Model {
         return $row->category;
     }
     }
+     function set_ym_widget() 
+    {
+        $this->db->where('widget', 'ym_widget'); 
+        $q = $this->db->get('tbwidget_setting');
+        foreach ($q->result() as $row) 
+        {
+            return $row->setting;
+        }
+    }
 }
 
 ?>
