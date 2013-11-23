@@ -34,12 +34,17 @@
             </ul>
         </li>
     </ul>  
+     
+        
+                
+      
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-star"></span> Alert <span class="badge">7</span></a></li>
       <li class="dropdown user-dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <?php echo $this->session->userdata('name'); ?> <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="/admin/profile"><span class="glyphicon glyphicon-user"></span> Shop Profile</a></li>
+                <li><a href="/admin/setting"><span class="glyphicon glyphicon-time"></span> Setting</a></li>
                 <li class="divider"></li>
                 <li><a href="/admin-panel/logout"><span class="glyphicon glyphicon-off"></span> Log Out</a></li>
               </ul>

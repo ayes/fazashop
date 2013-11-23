@@ -30,8 +30,19 @@ class Beranda_model extends CI_Model {
       }
     }
      function getRandomProductsLimit() {
-        $results = $this->db->order_by('id','random')->limit(18)->get('tbproducts')->result(); 
-        return $results;   
+       // $results = $this->db->order_by('id','random')->limit(18)->get('tbproducts')->result();
+         $this->db->order_by('id','random');
+         $this->db->limit($this->_home_product_limit());
+         return $this->db->get('tbproducts')->result();
+        //return $results;   
+    }
+    private function _home_product_limit() {
+      $this->db->where('id', 1);
+      $query = $this->db->get('tbsetting');
+      foreach ($query->result() as $row) 
+      {
+        return $row->home_product_limit;
+      }
     }
     function getProductCategory() {
         $this->db->where('product_category_id', $this->uri->segment(4));
