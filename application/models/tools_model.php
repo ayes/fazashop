@@ -53,6 +53,15 @@ class Tools_model extends CI_Model {
             return $row->setting;
         }
     }
+    function set_contact_widget() 
+    {
+        $this->db->where('widget', 'contact_widget'); 
+        $q = $this->db->get('tbwidget_setting');
+        foreach ($q->result() as $row) 
+        {
+            return $row->setting;
+        }
+    }
 }
 
 ?>

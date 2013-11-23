@@ -13,7 +13,6 @@
 class Products extends CI_Controller {
     function __construct() {
         parent::__construct();
-        $this->load->helper('archiveurl');
         $this->load->model('admin/products_model');
     }
     function index() {

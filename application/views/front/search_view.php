@@ -34,8 +34,6 @@
             <div class="col-xs-12">
                 <ol class="breadcrumb">
                     <li><a href="/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                        
-                    
                     <li class="active"><span class="glyphicon glyphicon-search"></span> Search</li>
                    
                 </ol>
@@ -60,6 +58,7 @@
                 </div>
                 </div>     
                 <?php $this->load->view('front/obj/ym_live_support'); ?>
+                <?php $this->load->view('front/obj/widget_contact'); ?>
             </div>    
             <?php if($getRandomProductsLimit->num_rows() != 0) : ?>
              <?php foreach ($getRandomProductsLimit->result() as $row): ?>
@@ -81,22 +80,10 @@
                     </div>
                 </div>     
 <?php endforeach; ?>              
-        <?php else: ?>
-		
+        <?php else: ?>		
             <h1>Product not available</h1>
 		<?php endif; ?>     
-           
-            
-            
-               
             </div>
-  
-
-       
-        
-        
-      
-         
          <?php $this->load->view('inc/footer'); ?>
 
   </body>

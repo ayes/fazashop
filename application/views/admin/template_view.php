@@ -29,7 +29,8 @@
         <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-time"></span> Widget <b class="caret"></b></a>
             <ul class="dropdown-menu">
-                <li><a href="/admin/ym_live_support"><span class="glyphicon glyphicon-time"></span> YM Live Support</a></li>  
+                <li><a href="/admin/ym_live_support"><span class="glyphicon glyphicon-time"></span> YM Live Support</a></li>
+                <li><a href="/admin/widget_contact"><span class="glyphicon glyphicon-time"></span> Contact</a></li>
             </ul>
         </li>
     </ul>  

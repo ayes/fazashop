@@ -48,6 +48,7 @@
             </div>
         </div>     
         <?php $this->load->view('front/obj/ym_live_support'); ?>
+        <?php $this->load->view('front/obj/widget_contact'); ?>  
     </div>    
             
              <?php foreach ($getRandomProductsLimit as $row): ?>

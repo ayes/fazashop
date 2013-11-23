@@ -44,6 +44,9 @@ class Profile_model extends CI_Model {
         $data = array(
             
             'name' => $this->input->post('name'),
+            'address' => $this->input->post('address'),
+            'email' => $this->input->post('email'),
+            'phone' => $this->input->post('phone'),
             
         );
         $this->db->where('id', $id);

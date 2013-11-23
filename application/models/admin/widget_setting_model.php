@@ -32,6 +32,23 @@ class Widget_setting_model extends CI_Model {
             $this->db->update('tbwidget_setting', $data);
         }
     }
+    function update_contact() 
+    {
+        if ($this->input->post('contact_widget_set') === FALSE)
+        {
+             $data = array(
+                'setting' => 0
+            );
+            $this->db->where('widget', 'contact_widget');
+            $this->db->update('tbwidget_setting', $data);
+        } else {
+            $data = array(
+                'setting' => 1
+            );
+            $this->db->where('widget', 'contact_widget');
+            $this->db->update('tbwidget_setting', $data);
+        }
+    }
    
 }
 

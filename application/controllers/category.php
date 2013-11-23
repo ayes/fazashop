@@ -12,6 +12,7 @@ class Category extends CI_Controller {
                 $data['get_name_category']= $this->beranda_model->get_name_category();
                 $data['getRandomProductsLimit']= $this->beranda_model->getProductCategory();
                 $data['get_ym_live_support']= $this->beranda_model->get_ym_live_support();
+                $data['get_shop_contact']= $this->beranda_model->get_shop_contact();
 		$this->load->view('front/category_view', $data);
 	}
 }

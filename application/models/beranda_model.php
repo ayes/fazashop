@@ -56,6 +56,11 @@ class Beranda_model extends CI_Model {
             $this->db->order_by('ym_support', 'asc');
             return $this->db->get('tblive_support');
         }
+        function get_shop_contact() 
+        {
+            $this->db->where('id', 1);
+            return $this->db->get('tbshop_profile');
+        }
 }
 
 ?>

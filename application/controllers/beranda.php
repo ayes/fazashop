@@ -11,6 +11,7 @@ class Beranda extends CI_Controller {
                 $data['getCategory']= $this->beranda_model->getCategory();
                 $data['getRandomProductsLimit']= $this->beranda_model->getRandomProductsLimit();
                 $data['get_ym_live_support']= $this->beranda_model->get_ym_live_support();
+                $data['get_shop_contact']= $this->beranda_model->get_shop_contact();
 		$this->load->view('front/beranda_view', $data);
 	}
 }
