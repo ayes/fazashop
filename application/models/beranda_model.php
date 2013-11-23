@@ -11,8 +11,10 @@
  * @author BaseSystem Management http://bsmsite.com
  */
 class Beranda_model extends CI_Model {
+    var $limit;
     function __construct() {
         parent::__construct();
+        $this->limit = $this->_home_product_limit();
     }
     function getCategory() 
     {
@@ -29,12 +31,11 @@ class Beranda_model extends CI_Model {
       return $row->cat;
       }
     }
-     function getRandomProductsLimit() {
-       // $results = $this->db->order_by('id','random')->limit(18)->get('tbproducts')->result();
-         $this->db->order_by('id','random');
-         $this->db->limit($this->_home_product_limit());
-         return $this->db->get('tbproducts')->result();
-        //return $results;   
+    function getRandomProductsLimit() 
+    {
+         $this->db->order_by('id','RANDOM');
+         $this->db->limit($this->limit);
+         return $this->db->get('tbproducts')->result();   
     }
     private function _home_product_limit() {
       $this->db->where('id', 1);
