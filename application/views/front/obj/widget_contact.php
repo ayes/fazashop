@@ -12,6 +12,12 @@
                 <address>
                     <strong>Phone</strong><br>
                     <?php echo $row->phone; ?>
+                    <?php if($row->phone1 !== "") : ?>
+                    <?php echo '<br />'.$row->phone1; ?>
+                    <?php endif; ?>
+                     <?php if($row->phone2 !== "") : ?>
+                    <?php echo '<br />'.$row->phone2; ?>
+                    <?php endif; ?>
                 </address>
             <?php endif; ?>
             <?php if($row->email !== "") : ?>

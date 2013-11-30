@@ -28,6 +28,14 @@
         <input value="<?php echo $row->phone; ?>" name="phone" type="text" class="form-control" id="phone" placeholder="Phone">
     </div>
     <div class="form-group">
+        <label for="phone1">Phone 1</label>
+        <input value="<?php echo $row->phone1; ?>" name="phone1" type="text" class="form-control" id="phone1" placeholder="Phone1">
+    </div>
+    <div class="form-group">
+        <label for="phone2">Phone 2</label>
+        <input value="<?php echo $row->phone2; ?>" name="phone2" type="text" class="form-control" id="phone2" placeholder="Phone2">
+    </div>
+    <div class="form-group">
         <label for="email">Email</label>
         <input value="<?php echo $row->email; ?>" name="email" type="text" class="form-control" id="email" placeholder="Email">
     </div>
