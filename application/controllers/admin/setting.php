@@ -19,6 +19,8 @@ class Setting extends CI_Controller {
        $data['header'] = 'admin/includes/header';
         $data['content'] = 'admin/object/setting/setting_view';
         $data['get_setting'] = $this->setting_model->get_setting();
+        $data['css'] = array();
+        $data['js'] = array();
         $this->load->view('admin/template_view', $data);
     }
     function update() {

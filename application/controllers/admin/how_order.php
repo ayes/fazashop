@@ -27,10 +27,14 @@ class How_order extends CI_Controller {
 	{
                 $data['content'] = 'admin/object/how_order/how_order_view';
                 $data['get_how_order'] = $this->how_order_model->get_how_order();
+                $data['css'] = array();
+        $data['js'] = array();
 		$this->load->view('admin/template_view', $data);
 	}
         function add() {
         $data['content'] = 'app/object/booking/booking_add';
+        $data['css'] = array();
+        $data['js'] = array();
         $this->load->view('app/template_view', $data);
     }
         function update() {

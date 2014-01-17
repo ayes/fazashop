@@ -18,12 +18,22 @@ class Products extends CI_Controller {
     function index() {
         $data['header'] = 'admin/includes/header';
         $data['content'] = 'admin/object/products/products_view';
+        $data['css'] = array();
+        $data['js'] = array();
         $data['getProducts'] = $this->products_model->getProducts();
         $this->load->view('admin/template_view', $data);
     }
     function add() {
         $data['header'] = 'admin/includes/header';
         $data['content'] = 'admin/object/products/products_add';
+        $data['css'] = array(
+            '<link rel="stylesheet" type="text/css" href="http://tools.bsmsite.com/template/wysihtml5/bootstrap-wysihtml5.css">'
+        );
+        $data['js'] = array(
+            '<script src="http://tools.bsmsite.com/template/wysihtml5/wysihtml5-0.3.0.js"></script>',
+            '<script src="http://tools.bsmsite.com/template/wysihtml5/bootstrap3-wysihtml5.js"></script>',
+            '<script>$(".textarea").wysihtml5();</script>'
+        );
         $data['getProductCategory'] = $this->products_model->getProductCategory();
         $this->load->view('admin/template_view', $data);
     }
@@ -40,6 +50,14 @@ class Products extends CI_Controller {
         $data['getProductCategory'] = $this->products_model->getProductCategory();
         $data['header'] = 'admin/includes/header';
         $data['content'] = 'admin/object/products/products_edit';
+        $data['css'] = array(
+            '<link rel="stylesheet" type="text/css" href="http://tools.bsmsite.com/template/wysihtml5/bootstrap-wysihtml5.css">'
+        );
+        $data['js'] = array(
+            '<script src="http://tools.bsmsite.com/template/wysihtml5/wysihtml5-0.3.0.js"></script>',
+            '<script src="http://tools.bsmsite.com/template/wysihtml5/bootstrap3-wysihtml5.js"></script>',
+            '<script>$(".textarea").wysihtml5();</script>'
+        );
         $this->load->view('admin/template_view', $data);
     }
     function editFormId() {
@@ -75,6 +93,8 @@ class Products extends CI_Controller {
         $data['header'] = 'admin/includes/header';
         $data['content'] = 'admin/object/products/products_view';
         $data['getProducts'] = $this->products_model->getSearchProduct();
+        $data['css'] = array();
+        $data['js'] = array();
         $this->load->view('admin/template_view', $data);
     }
 }

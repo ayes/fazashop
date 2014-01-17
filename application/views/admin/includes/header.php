@@ -12,6 +12,9 @@
     <link href="http://tools.bsmsite.com/template/bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="http://tools.bsmsite.com/template/fazashop/css/admin.css" rel="stylesheet">
+    <?php foreach ($css as $vcss) :
+        echo $vcss;
+    endforeach; ?>
   </head>
   <body>
 

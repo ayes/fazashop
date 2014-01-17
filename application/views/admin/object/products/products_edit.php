@@ -39,7 +39,7 @@
       </div>
      <div class="form-group">
     <label for="description">Description</label>
-    <textarea name="description" class="form-control" rows="8"><?php echo $row->description; ?></textarea>
+    <textarea name="description" class="form-control textarea" style="width: 810px; height: 200px"><?php echo $row->description; ?></textarea>
       </div>
               <div class="form-group">
                   <label for="pic"><?php echo img(base_url().'fx-archive/images_product/thumbs/'.$row->picture); ?></label>

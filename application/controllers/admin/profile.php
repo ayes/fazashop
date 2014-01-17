@@ -27,10 +27,14 @@ class Profile extends CI_Controller {
 	{
                 $data['content'] = 'admin/object/profile/profile_view';
                 $data['getProfile'] = $this->profile_model->getProfile();
+                $data['css'] = array();
+        $data['js'] = array();
 		$this->load->view('admin/template_view', $data);
 	}
         function add() {
         $data['content'] = 'app/object/booking/booking_add';
+        $data['css'] = array();
+        $data['js'] = array();
         $this->load->view('app/template_view', $data);
     }
         function update() {

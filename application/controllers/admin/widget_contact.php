@@ -18,11 +18,15 @@ class Widget_contact extends CI_Controller
     function index() {
         $data['header'] = 'admin/includes/header';
         $data['content'] = 'admin/object/widget_contact/widget_contact_view';
+        $data['css'] = array();
+        $data['js'] = array();
         $this->load->view('admin/template_view', $data);
     }
      function add() {
         $data['header'] = 'admin/includes/header';
         $data['content'] = 'admin/object/ym_live_support/ym_live_support_add';
+        $data['css'] = array();
+        $data['js'] = array();
          $this->load->view('admin/template_view', $data);
     }
     function save() 
@@ -35,6 +39,8 @@ class Widget_contact extends CI_Controller
         $data['getEdit'] = $this->ym_live_support_model->editId();
         $data['header'] = 'admin/includes/header';
         $data['content'] = 'admin/object/ym_live_support/ym_live_support_edit';
+        $data['css'] = array();
+        $data['js'] = array();
          $this->load->view('admin/template_view', $data);
     }
     function editFormId() {

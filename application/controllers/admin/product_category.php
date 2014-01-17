@@ -19,11 +19,15 @@ class Product_category extends CI_Controller {
         $data['header'] = 'admin/includes/header';
         $data['content'] = 'admin/object/product_category/product_category_view';
         $data['getProductCategory'] = $this->product_category_model->getProductCategory();
+        $data['css'] = array();
+        $data['js'] = array();
         $this->load->view('admin/template_view', $data);
     }
      function add() {
         $data['header'] = 'admin/includes/header';
         $data['content'] = 'admin/object/product_category/product_category_add';
+        $data['css'] = array();
+        $data['js'] = array();
          $this->load->view('admin/template_view', $data);
     }
     function save() {
@@ -45,6 +49,8 @@ class Product_category extends CI_Controller {
         $data['getEdit'] = $this->product_category_model->editId();
         $data['header'] = 'admin/includes/header';
         $data['content'] = 'admin/object/product_category/product_category_edit';
+        $data['css'] = array();
+        $data['js'] = array();
          $this->load->view('admin/template_view', $data);
     }
     function editFormId() {

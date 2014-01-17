@@ -18,6 +18,8 @@ class Dashboard extends CI_Controller {
     function index() {
         $data['header'] = 'admin/includes/header';
         $data['content'] = 'admin/object/dashboard/dashboard_view';
+        $data['css'] = array();
+        $data['js'] = array();
         $this->load->view('admin/template_view', $data);
     }
     function admin_logged_in() {

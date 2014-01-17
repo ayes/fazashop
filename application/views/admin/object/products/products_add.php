@@ -32,7 +32,7 @@
       </div>
       <div class="form-group">
     <label for="description">Description</label>
-    <textarea name="description" class="form-control" rows="8"></textarea>
+    <textarea name="description" class="form-control textarea" placeholder="Masukan keterangan ..." style="width: 810px; height: 200px"></textarea>
       </div>
       <div class="form-group">
     <label for="picture">Picture</label>

@@ -27,12 +27,16 @@ class Banners extends CI_Controller {
 	{
                 $data['content'] = 'admin/object/banners/banners_view';
                 $data['getBanners'] = $this->banners_model->getBanners();
+                $data['css'] = array();
+        $data['js'] = array();
 		$this->load->view('admin/template_view', $data);
 	}
          function edit() {
         $data['getEdit'] = $this->banners_model->editId();
         $data['header'] = 'admin/includes/header';
         $data['content'] = 'admin/object/banners/banners_edit';
+        $data['css'] = array();
+        $data['js'] = array();
         $this->load->view('admin/template_view', $data);
         }
         function update() {
