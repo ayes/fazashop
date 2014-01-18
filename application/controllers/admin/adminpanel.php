@@ -22,7 +22,8 @@ class Adminpanel extends CI_Controller {
 		}
 		else
 		{
-			 $this->load->view('admin/login_view');
+                    $data['js'] = array();
+                    $this->load->view('admin/login_view', $data);
 		}
        
     }
@@ -67,6 +68,7 @@ class Adminpanel extends CI_Controller {
 			else
 			{
 				$data['error'] = '<span class=error>Username atau password salah !</span>';
+                                $data['js'] = array();
                                 $this->load->view('admin/template_login_view', $data);
 			}
 		}
